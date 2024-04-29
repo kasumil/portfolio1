@@ -1,9 +1,15 @@
 import React from 'react';
 import { styled } from 'styled-components';
 
-const AtomicTitle = ({ textfont, title, textsize, textcolor, textweight }) => {
+const AtomTitle = ({ textfont, title, textsize, textcolor, textweight, letterspacing }) => {
     return (
-        <TitleTag textfont={textfont} textsize={textsize} textcolor={textcolor} textweight={textweight}>
+        <TitleTag
+            textfont={textfont}
+            textsize={textsize}
+            textcolor={textcolor}
+            textweight={textweight}
+            letterSpacing={letterspacing}
+        >
             {title}
         </TitleTag>
     );
@@ -14,8 +20,9 @@ const TitleTag = styled.div`
     font-size: ${props => props?.textsize|| 48 }px;
     color: ${props => props?.textcolor|| "black" };
     font-weight: ${props=> props?.textweight || "700"};
+    letter-spacing: ${props=> props?.letterSpacing || ""};
 `;
 
 
 
-export default AtomicTitle;
+export default AtomTitle;

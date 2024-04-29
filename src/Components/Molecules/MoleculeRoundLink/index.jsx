@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtomicRound, AtomicTitle, AtomicText } from '@Components/Atomics';
+import { AtomRound, AtomTitle, AtomText } from '@Components/Atoms';
 
 const Index = ({ 
     RoundGap,
@@ -10,32 +10,36 @@ const Index = ({
     RoundTextColor,
     RoundTextSize,
     RoundTextWeight,
+    RoundTextLetterSpacing,
     leftItem, 
     rightItem
 }) => {
     return (
         <>
-            <AtomicRound gap={RoundGap} padding={RoundPadding}>
+            <AtomRound gap={RoundGap} padding={RoundPadding}>
                 {leftItem && leftItem}
                 {RoundIsTitle
                 ?
-                    <AtomicTitle
+                    <AtomTitle
                         title={RoundText}
                         textfont={RoundTextFont} // true or false
                         textsize={18}
                         textcolor={"var(--black03)"}
                         textweight={400}
+                        lineheight={RoundTextLetterSpacing}
+                        
                     />
                 :
-                    <AtomicText
+                    <AtomText
                         text={RoundText}
                         textcolor={RoundTextColor}
                         textsize={RoundTextSize}
                         textweight={RoundTextWeight}
+                        lineheight={RoundTextLetterSpacing}
                     />
                 }
                 {rightItem && rightItem}
-            </AtomicRound>  
+            </AtomRound>  
         </>
     );
 }

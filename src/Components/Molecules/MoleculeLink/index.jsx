@@ -1,15 +1,14 @@
-import React from 'react';
-import { AtomicLink, AtomicText } from '@Components/Atomics';
-import { AtomicTitle } from '../../Atomics';
+import { AtomLink, AtomText } from '@Components/Atoms';
+import { AtomTitle } from '../../Atoms';
 
 const Index = ({ leftItem, gap, width, isTitle, textFont = false, text, to, rightItem, textColor }) => {
     return (
         <>
-            <AtomicLink to={to} gap={gap} width={width}>
+            <AtomLink to={to} gap={gap} width={width}>
                 {leftItem && leftItem}
                 {isTitle
                 ?
-                    <AtomicTitle
+                    <AtomTitle
                         title={text}
                         textfont={textFont?.toString()} // true or false
                         textsize={18}
@@ -17,12 +16,12 @@ const Index = ({ leftItem, gap, width, isTitle, textFont = false, text, to, righ
                         textweight={400}
                     />
                 :
-                    <AtomicText
+                    <AtomText
                         text={text}
                     />
                 }
                 {rightItem && rightItem}
-            </AtomicLink>  
+            </AtomLink>  
         </>
     );
 }

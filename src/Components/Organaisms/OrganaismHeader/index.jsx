@@ -1,10 +1,10 @@
-import { AtomicFlexWrap, AtomicRound, AtomicIcon } from '@Components/Atomics';
-import { MoleculeLink, MoleculeRoundLink, MoleculeHeaderWrap } from '@Components/Molecules';
+import { AtomFlexWrap, AtomRound, AtomIcon } from '@Components/Atoms';
+import { MoleculeLink, MoleculeRoundLink, MoleculePaddingWrap } from '@Components/Molecules';
 import TitleLogo from '@Assets/Images/Svgs/TitleLogo';
 
 const Index = ({
     FullWrap,
-    AtomicFlexWrapWidth,
+    AtomFlexWrapWidth,
     AtomicLinkJson,
     LinkRadius,
     LinkBgColor,
@@ -29,25 +29,25 @@ const Index = ({
 }) => {
     return (
         <>
-            <MoleculeHeaderWrap>
-                <AtomicFlexWrap width={FullWrap}>
-                    <AtomicFlexWrap width={AtomicFlexWrapWidth}>
+            <MoleculePaddingWrap border={"border"}>
+                <AtomFlexWrap width={FullWrap}>
+                    <AtomFlexWrap width={AtomFlexWrapWidth}>
                         {AtomicLinkJson?.map((el)=> {
                             return (
                                 <MoleculeLink key={el.text} text={el?.text} to={el?.to} />
                             );
                         })}
-                    </AtomicFlexWrap>
+                    </AtomFlexWrap>
                     <div>
                         <MoleculeLink
                             leftItem={
-                                <AtomicRound
+                                <AtomRound
                                     radius={LinkRadius}
                                     backgroundcolor={LinkBgColor}
                                     padding={LinkPadding}
                                 >
                                     <TitleLogo />
-                                </AtomicRound>
+                                </AtomRound>
                             } 
                             text={LinkText}
                             to={LinkTo}
@@ -61,7 +61,7 @@ const Index = ({
                         <MoleculeRoundLink
                             RoundGap={RoundGap}
                             RoundPadding={RoundPadding}
-                            leftItem={<AtomicIcon
+                            leftItem={<AtomIcon
                                 icon={RoundIcon}
                                 height={RoundHeight}
                                 style={RoundStyle}
@@ -74,8 +74,8 @@ const Index = ({
                             RoundTextWeight={RoundTextWeight}
                         />
                     </div>
-                </AtomicFlexWrap>
-            </MoleculeHeaderWrap>
+                </AtomFlexWrap>
+            </MoleculePaddingWrap>
         </>
     );
 }

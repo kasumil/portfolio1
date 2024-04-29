@@ -1,11 +1,11 @@
-import { OrganaismHeader } from '@Components/Organaisms';
+import { OrganaismHeader, OrganaismSection } from '@Components/Organaisms';
 
 const Index = () => {
     return (
         <>
             <OrganaismHeader
                 FullWrap={"100%"}
-                AtomicFlexWrapWidth={"204px"}
+                AtomFlexWrapWidth={"204px"}
                 AtomicLinkJson={[
                     { text: "Cards", to: "/Cards" },
                     { text: "About", to: "/About" },
@@ -32,6 +32,7 @@ const Index = () => {
                 RoundTextSize={16}
                 RoundTextWeight={"bold"}
             />
+            <OrganaismSection />
         </>
     );
 }

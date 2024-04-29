@@ -1,9 +1,8 @@
-import React from 'react';
 import { styled } from "styled-components"; 
 
-const Index = ({ children, padding }) => {
+const Index = ({ children, padding, border }) => {
     return (
-        <MoleculeHeaderWrap padding={padding}>
+        <MoleculeHeaderWrap padding={padding} border={border}>
             {children}
         </MoleculeHeaderWrap>
     );
@@ -12,8 +11,9 @@ const Index = ({ children, padding }) => {
 const MoleculeHeaderWrap = styled.div`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: ${props => props.padding? props?.padding : "16px 100px"};
-    border-bottom: 1px solid var(--black05);
+    border-bottom: ${props => props.border? "1px solid var(--black05)": ''};
 `;
 
 export default Index;

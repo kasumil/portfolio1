@@ -1,8 +1,8 @@
 import { styled } from 'styled-components'
 
-const Index = ({ children, width }) => {
+const Index = ({ children, width, justify }) => {
     return (
-        <FlexWrap width={width}>
+        <FlexWrap width={width} justify={justify}>
             {children}
         </FlexWrap>
     );
@@ -12,7 +12,7 @@ const Index = ({ children, width }) => {
 const FlexWrap = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: ${props => props?.justify? props.justify : "space-between"};
     width: ${props => props?.width? props.width : "inherit"}
 `;
 

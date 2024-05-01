@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-const AtomText = ({ width, text, textsize, textcolor, textweight, lineheight }) => {
+const AtomText = ({ width, text, textsize, textcolor, textweight, lineheight, align }) => {
     return (
         <Ptag
             width={width}
@@ -8,6 +8,7 @@ const AtomText = ({ width, text, textsize, textcolor, textweight, lineheight }) 
             textcolor={textcolor}
             textweight={textweight}
             lineheight={lineheight}
+            align={align}
         >
             {text}
         </Ptag>
@@ -20,7 +21,8 @@ const Ptag = styled.p`
     font-size: ${props => props?.textsize|| 16}px;
     color: ${props => props?.textcolor|| "black" };
     font-weight: ${props=> props?.textweight || "400"};
-    line-height: ${props => props?.lineheight || ""}
+    line-height: ${props => props?.lineheight || ""};
+    text-align: ${props => props?.align || ""};
     margin: 0;
 `;
 

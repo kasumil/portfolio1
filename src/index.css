@@ -76,8 +76,17 @@ table {
 	--brown: #39302A;
 	--orange: #ED653B;
 	--orange-light: #ED653B14;
-	--pink-light: #ECF4E9;
+	--green-light: #ECF4E9;
 	--gray: #E3E3E3;
+	--gray-deep: #9A9A9A1F;
+}
 
 
+@keyframes slideRightToLeft {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }

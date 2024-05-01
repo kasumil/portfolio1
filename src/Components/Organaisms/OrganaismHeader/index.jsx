@@ -1,4 +1,4 @@
-import { AtomFlexWrap, AtomRound, AtomIcon } from '@Components/Atoms';
+import { AtomFlexWrap, AtomRoundBg, AtomIcon } from '@Components/Atoms';
 import { MoleculeLink, MoleculeRoundLink, MoleculePaddingWrap } from '@Components/Molecules';
 import TitleLogo from '@Assets/Images/Svgs/TitleLogo';
 
@@ -41,13 +41,13 @@ const Index = ({
                     <div>
                         <MoleculeLink
                             leftItem={
-                                <AtomRound
+                                <AtomRoundBg
                                     radius={LinkRadius}
                                     backgroundcolor={LinkBgColor}
                                     padding={LinkPadding}
                                 >
                                     <TitleLogo />
-                                </AtomRound>
+                                </AtomRoundBg>
                             } 
                             text={LinkText}
                             to={LinkTo}

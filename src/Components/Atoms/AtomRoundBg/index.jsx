@@ -1,9 +1,15 @@
 import React from 'react';
 import { styled } from "styled-components";
 
-const Index = ({ children, gap, radius, backgroundcolor, padding }) => {
+const Index = ({ children, gap, radius, backgroundcolor, padding, dropshadow }) => {
     return (
-        <RoundedBg gap={gap} radius={radius} backgroundcolor={backgroundcolor} padding={padding}>
+        <RoundedBg 
+            gap={gap}
+            radius={radius} 
+            backgroundcolor={backgroundcolor}
+            padding={padding}
+            dropshadow={dropshadow}
+        >
             {children}
         </RoundedBg>
     );
@@ -17,6 +23,7 @@ const RoundedBg = styled.div`
     justify-content: center;
     padding: ${props => props.padding? props.padding : "0"};
     gap: ${props => props.gap? props.gap : "0"};
+    filter : drop-shadow(${props => props.dropshadow? props.dropshadow : "0"});
 `;
 
 export default Index;

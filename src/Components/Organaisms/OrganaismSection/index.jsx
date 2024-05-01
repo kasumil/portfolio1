@@ -8,7 +8,7 @@ const Index = () => {
             <AtomBgColor
                 bgcolor={"var(--orange-light)"}
             >
-                <MoleculePaddingWrap padding={"80px 100px"}>
+                <MoleculePaddingWrap padding={"5em 6.25em"}>
                     <LeftWrap>
                         <LeftWrap gap={"16px"}>
                             <AtomTitle

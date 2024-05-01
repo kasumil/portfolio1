@@ -1,4 +1,4 @@
-import { OrganaismHeader, OrganaismSection } from '@Components/Organaisms';
+import { OrganaismHeader, OrganaismSection, OrganasimAnimateSlide, OrganismProudcts } from '@Components/Organaisms';
 
 const Index = () => {
     return (
@@ -33,6 +33,54 @@ const Index = () => {
                 RoundTextWeight={"bold"}
             />
             <OrganaismSection />
+            <OrganasimAnimateSlide
+                bgcolor={"var(--green-light)"}
+                moleculePadding={"25px 0"}
+                atomWidth={"100%"}
+                atomSlide={[
+                    {
+                        atomIcon: "ph:check-circle-light",
+                        atomHeight: "20px",
+                        atomStyle: { color: "var(--black01)"},
+                        atomTextsize: "18",
+                        atomTextcolor: "var(--black01)",
+                        atomTextweight: 400,
+                        atomLineheight: "24px",
+                        atomText: "Fast, free delivery & assembly",
+                    },
+                    {
+                        atomIcon: "ph:check-circle-light",
+                        atomHeight: "20px",
+                        atomStyle: { color: "var(--black01)"},
+                        atomTextsize: "18",
+                        atomTextcolor: "var(--black01)",
+                        atomTextweight: 400,
+                        atomLineheight: "24px",
+                        atomText: "Convenient rent or buy options",
+                    },
+                    {
+                        atomIcon: "ph:check-circle-light",
+                        atomHeight: "20px",
+                        atomStyle: { color: "var(--black01)"},
+                        atomTextsize: "18",
+                        atomTextcolor: "var(--black01)",
+                        atomTextweight: 400,
+                        atomLineheight: "24px",
+                        atomText: "Low upfront costs for all rentals",
+                    },
+                    {
+                        atomIcon: "ph:check-circle-light",
+                        atomHeight: "20px",
+                        atomStyle: { color: "var(--black01)"},
+                        atomTextsize: "18",
+                        atomTextcolor: "var(--black01)",
+                        atomTextweight: 400,
+                        atomLineheight: "24px",
+                        atomText: "Flexibility to buy out rental items later",
+                    },
+                ]}
+            />
+            <OrganismProudcts />
         </>
     );
 }

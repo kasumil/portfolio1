@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtomRound, AtomTitle, AtomText } from '@Components/Atoms';
+import { AtomRoundBg, AtomTitle, AtomText } from '@Components/Atoms';
 
 const Index = ({ 
     RoundGap,
@@ -16,7 +16,7 @@ const Index = ({
 }) => {
     return (
         <>
-            <AtomRound gap={RoundGap} padding={RoundPadding}>
+            <AtomRoundBg gap={RoundGap} padding={RoundPadding}>
                 {leftItem && leftItem}
                 {RoundIsTitle
                 ?
@@ -39,7 +39,7 @@ const Index = ({
                     />
                 }
                 {rightItem && rightItem}
-            </AtomRound>  
+            </AtomRoundBg>  
         </>
     );
 }

@@ -24,6 +24,7 @@ const Ptag = styled.p`
     line-height: ${props => props?.lineheight || ""};
     text-align: ${props => props?.align || ""};
     margin: 0;
+    white-space: break-spaces;
 `;
 
 export default AtomText;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from "styled-components";
 
-const Index = ({ children, gap, radius, backgroundcolor, padding, dropshadow }) => {
+const Index = ({ children, gap, radius, backgroundcolor, padding, dropshadow, width }) => {
     return (
         <RoundedBg 
             gap={gap}
@@ -9,6 +9,7 @@ const Index = ({ children, gap, radius, backgroundcolor, padding, dropshadow }) 
             backgroundcolor={backgroundcolor}
             padding={padding}
             dropshadow={dropshadow}
+            width={width}
         >
             {children}
         </RoundedBg>
@@ -16,6 +17,7 @@ const Index = ({ children, gap, radius, backgroundcolor, padding, dropshadow }) 
 }
 
 const RoundedBg = styled.div`
+    width : ${props => props.width? props.width : ""};
     border-radius: ${props => props.radius? props.radius : "32px"};
     background-color: ${props => props.backgroundcolor? props.backgroundcolor : "var(--orange)"};
     display: flex;

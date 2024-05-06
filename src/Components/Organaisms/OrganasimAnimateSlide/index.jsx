@@ -12,7 +12,7 @@ const Index = ({
             <div style={{ width: "100%", animation: "slideRightToLeft 20s linear infinite" }}>
                 <MoleculePaddingWrap padding={moleculePadding}>
                         <AtomFlexWrap width={atomWidth}>
-                            {atomSlide.map((el, id)=> {
+                            {atomSlide?.map((el, id)=> {
                                 return (
                                     <MoleculeFlexWrap key={id}>
                                         <AtomIcon

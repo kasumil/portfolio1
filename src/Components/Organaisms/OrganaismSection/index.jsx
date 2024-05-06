@@ -1,52 +1,61 @@
-import { AtomBgColor, AtomTitle, AtomText, AtomIcon, AtomImg } from "@Components/Atoms";
+import { AtomRoundBg, AtomTitle, AtomText, AtomIcon, AtomImg } from "@Components/Atoms";
 import { MoleculePaddingWrap, MoleculeRoundLink } from "@Components/Molecules";
 import { styled } from "styled-components";
 
-const Index = () => {
+const Index = ({ sectionData }) => {
     return (
         <>
-            <AtomBgColor
-                bgcolor={"var(--orange-light)"}
+            <AtomRoundBg
+                backgroundcolor={sectionData?.bgcolor}
+                radius={sectionData?.radius}
+                width={sectionData?.width}
             >
-                <MoleculePaddingWrap padding={"5em 6.25em"}>
+                <MoleculePaddingWrap
+                    padding={sectionData?.padding? sectionData?.padding : "5em 6.25em"}
+                    width={sectionData?.width}
+                    gap={sectionData?.gap}
+                    reverse={sectionData?.reverse}
+                >
                     <LeftWrap>
-                        <LeftWrap gap={"16px"}>
+                        <LeftWrap gap={sectionData?.content?.gap}>
                             <AtomTitle
                                 letterspacing={"-0.96px"}
-                                title={'An innovative way to make furniture lighter'}
+                                title={sectionData?.content?.title}
+                                align={sectionData?.content?.align}
                             />
                             <AtomText
-                                width={"424px"}
-                                lineheight={"28px"}
-                                text={"Discover hassle-free delivery, free assembly and the flexibility to rent, rent-to-own or buy."}
+                                width={sectionData?.content?.txt?.width}
+                                lineheight={sectionData?.content?.txt?.lineheight}
+                                text={sectionData?.content?.txt?.text}
+                                align={sectionData?.content?.txt?.align}
                             />
                         </LeftWrap>
                         <ButtonWrap>
                             <MoleculeRoundLink
-                                RoundGap={"10px"}
-                                RoundPadding={"16px 32px"}
+                                RoundGap={sectionData?.content?.btn?.RoundGap}
+                                RoundPadding={sectionData?.content?.btn?.RoundPadding}
                                 rightItem={<AtomIcon
-                                    icon={"iconamoon:arrow-right-2-duotone"}
-                                    height={"15"}
-                                    style={{ color : "white"}}
+                                    icon={sectionData?.content?.btn?.icon}
+                                    height={sectionData?.content?.btn?.height}
+                                    style={sectionData?.content?.btn?.style}
                                 />}
-                                RoundIsTitle={false}
-                                RoundTextFont={false}
-                                RoundText={"Start shopping"}
-                                RoundTextColor={"var(--white)"}
-                                RoundTextSize={20}
-                                RoundTextLetterSpacing={"-1%"}
+                                RoundIsTitle={sectionData?.content?.btn?.RoundIsTitle}
+                                RoundTextFont={sectionData?.content?.btn?.RoundTextFont}
+                                RoundText={sectionData?.content?.btn?.RoundText}
+                                RoundTextColor={sectionData?.content?.btn?.RoundTextColor}
+                                RoundTextSize={sectionData?.content?.btn?.RoundTextSize}
+                                RoundTextLetterSpacing={sectionData?.content?.btn?.RoundTextLetterSpacing}
                             />
                         </ButtonWrap>
                     </LeftWrap>
                     <AtomImg
-                        src={"/public/images/bannerhero.png"}
+                        src={sectionData?.img?.src}
                         alt={"banner"}
-                        width={"65em"}
-                        height={"35em"}
+                        width={sectionData?.img?.width}
+                        height={sectionData?.img?.height}
                     />
                 </MoleculePaddingWrap>
-            </AtomBgColor>
+            </AtomRoundBg>
         </>
     );
 }

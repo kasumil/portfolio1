@@ -23,8 +23,9 @@ const Index = () => {
                 </AtomFlexWrap>
                 <MoleculeFlexWrap
                     gap={"32px"}
+                    justify={"space-between"}
                 >
-                    <AtomRoundBg radius={"12px"} backgroundcolor={"var(--white)"} dropshadow={"12px 16px 50px var(--gray-deep)"}>
+                    <AtomRoundBg radius={"12px"} backgroundcolor={"var(--white)"} dropshadow={"12px 16px 50px var(--gray-deep)"} width={"100%"}>
                         <MoleculePaddingWrap padding={"32px 9.5px"}>
                             <MoleculeFlexWrap
                                 justify={"center"}
@@ -46,7 +47,7 @@ const Index = () => {
                             </MoleculeFlexWrap>
                         </MoleculePaddingWrap>
                     </AtomRoundBg>
-                    <AtomRoundBg radius={"12px"} backgroundcolor={"var(--white)"} dropshadow={"12px 16px 50px var(--gray-deep)"}>
+                    <AtomRoundBg radius={"12px"} backgroundcolor={"var(--white)"} dropshadow={"12px 16px 50px var(--gray-deep)"} width={"100%"}>
                         <MoleculePaddingWrap padding={"32px 9.5px"}>
                             <MoleculeFlexWrap
                                 justify={"center"}
@@ -68,7 +69,7 @@ const Index = () => {
                             </MoleculeFlexWrap>
                         </MoleculePaddingWrap>
                     </AtomRoundBg>
-                    <AtomRoundBg radius={"12px"} backgroundcolor={"var(--white)"} dropshadow={"12px 16px 50px var(--gray-deep)"}>
+                    <AtomRoundBg radius={"12px"} backgroundcolor={"var(--white)"} dropshadow={"12px 16px 50px var(--gray-deep)"} width={"100%"}>
                         <MoleculePaddingWrap padding={"32px 9.5px"}>
                             <MoleculeFlexWrap
                                 justify={"center"}

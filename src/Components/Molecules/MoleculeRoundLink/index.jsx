@@ -13,11 +13,13 @@ const Index = ({
     RoundTextLetterSpacing,
     leftItem,
     backgroundcolor, 
-    rightItem
+    rightItem,
+    width,
+    border
 }) => {
     return (
         <>
-            <AtomRoundBg gap={RoundGap} padding={RoundPadding} backgroundcolor={backgroundcolor}>
+            <AtomRoundBg width={width} border={border} gap={RoundGap} padding={RoundPadding} backgroundcolor={backgroundcolor}>
                 {leftItem && leftItem}
                 {RoundIsTitle
                 ?

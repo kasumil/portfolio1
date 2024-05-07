@@ -12,9 +12,9 @@ const Index = ({ list }) => {
                     direction={"column"}
                     gap={"40px"}
                 >
-                    {list.map(item=> {
+                    {list.map((item, i)=> {
                         return (
-                            <OrganaismSection sectionData={item} key={item} />
+                            <OrganaismSection sectionData={item} key={i} />
                         )
                     })}
                 </MoleculeFlexWrap>

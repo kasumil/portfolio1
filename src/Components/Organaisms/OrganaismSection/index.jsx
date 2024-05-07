@@ -32,6 +32,9 @@ const Index = ({ sectionData }) => {
                         </LeftWrap>
                         <ButtonWrap>
                             <MoleculeRoundLink
+                                width={sectionData?.content?.btn?.width}
+                                backgroundcolor={sectionData?.content?.btn?.backgroundcolor}
+                                border={sectionData?.content?.btn?.border}
                                 RoundGap={sectionData?.content?.btn?.RoundGap}
                                 RoundPadding={sectionData?.content?.btn?.RoundPadding}
                                 rightItem={<AtomIcon

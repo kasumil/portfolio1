@@ -1,4 +1,5 @@
-import { OrganaismHeader, OrganaismSection, OrganasimAnimateSlide, OrganismProudcts, OrganismByRoom, OrganaismTitleLink } from '@Components/Organaisms';
+import { OrganaismHeader, OrganaismSection, OrganasimAnimateSlide, OrganaismProudcts, OrganaismByRoom, OrganaismTitleLink, OrganaismNewItem, OrganaismFooter } from '@Components/Organaisms';
+import bannerHero from "/Images/bannerhero.png";
 import room1 from '/Images/room1.png';
 import room2 from '/Images/room2.png';
 import room3 from '/Images/room3.png';
@@ -6,20 +7,32 @@ import room4 from '/Images/room4.png';
 import box1 from '/Images/box1.png';
 import box2 from '/Images/box2.png';
 import box3 from '/Images/box3.png';
+import furniture1 from '/Images/furniture1.png';
+import furniture2 from '/Images/furniture2.png';
+import furniture3 from '/Images/furniture3.png';
+import furniture4 from '/Images/furniture4.png';
 
 
 
 const Index = () => {
     const rooms = [
-        { room: room1, name: "Office", link: "office" },
-        { room: room2, name: "Bedroom", link: "bedroom" },
-        { room: room3, name: "Living Room", link: "living" },
-        { room: room4, name: "Dining room", link: "dining" },
+        { room: room1, name: "Office", link: "124" },
+        { room: room2, name: "Bedroom", link: "555" },
+        { room: room3, name: "Living Room", link: "11486" },
+        { room: room4, name: "Dining room", link: "22154" },
+    ];
+
+    const newitem = [
+        { item: furniture1, name: "Valencia Modular", price : 2999, link: 1 },
+        { item: furniture2, name: "The Floyd sofa", price : 1200, link: 2 },
+        { item: furniture3, name: "Playa Outdoor", price : 1999, link: 3 },
+        { item: furniture4, name: "Remi standing", price : 2999, link: 4 },
     ];
 
     const HeroBanner = {
         bgcolor: "var(--orange-light)",
         radius: "0px",
+        gap: "110px",
         content: {
             gap : "16px",
             title: 'An innovative way to make furniture lighter',
@@ -29,6 +42,7 @@ const Index = () => {
                 text : "Discover hassle-free delivery, free assembly and the flexibility to rent, rent-to-own or buy.",
             },
             btn : {
+                width: "235px",
                 RoundGap : "10px",
                 RoundPadding : "16px 32px",
                 icon : "iconamoon:arrow-right-2-duotone",
@@ -43,7 +57,7 @@ const Index = () => {
             }
         },
         img : {
-            src : "/public/images/bannerhero.png",
+            src : bannerHero,
             width : "65em",
             height : "35em"
         }
@@ -67,15 +81,18 @@ const Index = () => {
                     align: "left"
                 },
                 btn : {
+                    width: "202px",
+                    border : "1px solid var(--orange)",
+                    backgroundcolor: "transparents",
                     RoundGap : "10px",
-                    RoundPadding : "16px 32px",
+                    RoundPadding : "16px 18px",
                     icon : "iconamoon:arrow-right-2-duotone",
                     height : "15",
-                    style : { color : "white"},
+                    style : { color : "var(--orange)" },
                     RoundIsTitle : false,
                     RoundTextFont : false,
                     RoundText : "Learn more",
-                    RoundTextColor : "var(--white)",
+                    RoundTextColor : "var(--orange)",
                     RoundTextSize : 20,
                     RoundTextLetterSpacing : "-1%",
                 }
@@ -91,7 +108,7 @@ const Index = () => {
             padding: "24px 24px 24px 64px",
             bgcolor: "var(--orange-light)",
             width: "100%",
-            reverse: true,
+            reverse: "true",
             gap: "147px",
             content: {
                 gap : "16px",
@@ -104,15 +121,18 @@ const Index = () => {
                     align: "left"
                 },
                 btn : {
+                    width: "202px",
+                    border : "1px solid var(--orange)",
+                    backgroundcolor: "transparents",
                     RoundGap : "10px",
-                    RoundPadding : "16px 32px",
+                    RoundPadding : "16px 18px",
                     icon : "iconamoon:arrow-right-2-duotone",
                     height : "15",
-                    style : { color : "white"},
+                    style : { color : "var(--orange)"},
                     RoundIsTitle : false,
                     RoundTextFont : false,
                     RoundText : "Learn more",
-                    RoundTextColor : "var(--white)",
+                    RoundTextColor : "var(--orange)",
                     RoundTextSize : 20,
                     RoundTextLetterSpacing : "-1%",
                 }
@@ -140,15 +160,18 @@ const Index = () => {
                     align: "left"
                 },
                 btn : {
+                    width: "202px",
+                    border : "1px solid var(--orange)",
+                    backgroundcolor: "transparents",
                     RoundGap : "10px",
-                    RoundPadding : "16px 32px",
+                    RoundPadding : "16px 18px",
                     icon : "iconamoon:arrow-right-2-duotone",
                     height : "15",
-                    style : { color : "white"},
+                    style : { color : "var(--orange)"},
                     RoundIsTitle : false,
                     RoundTextFont : false,
                     RoundText : "Learn more",
-                    RoundTextColor : "var(--white)",
+                    RoundTextColor : "var(--orange)",
                     RoundTextSize : 20,
                     RoundTextLetterSpacing : "-1%",
                 }
@@ -156,7 +179,7 @@ const Index = () => {
             img : {
                 src : box3,
                 width : "100%",
-                height : "24.25em"
+                height : "30.25em"
             }
         },
     ]
@@ -240,9 +263,11 @@ const Index = () => {
                     },
                 ]}
             />
-            <OrganismProudcts />
-            <OrganismByRoom rooms={rooms} title={"Browse by room"} />
+            <OrganaismProudcts />
+            <OrganaismByRoom rooms={rooms} title={"Browse by room"} />
             <OrganaismTitleLink list={freeList} />
+            <OrganaismNewItem newitem={newitem} title={"Shop what’s new"}/>
+            <OrganaismFooter />
         </>
     );
 }

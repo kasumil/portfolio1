@@ -1,11 +1,7 @@
-import { AtomFlexWrap, AtomTitle, AtomIcon, AtomImg, AtomLink } from '@Components/Atoms';
+import { AtomFlexWrap, AtomTitle, AtomText, AtomImg, AtomLink } from '@Components/Atoms';
 import { MoleculePaddingWrap, MoleculeRoundLink, MoleculeFlexWrap } from '@Components/Molecules';
-import room1 from '/Images/room1.png';
-import room2 from '/Images/room2.png';
-import room3 from '/Images/room3.png';
-import room4 from '/Images/room4.png';
 
-const Index = ({ rooms, title }) => {
+const Index = ({ newitem, title }) => {
     return (
         <MoleculePaddingWrap padding={"80px 100px"}>
             <MoleculeFlexWrap
@@ -29,9 +25,9 @@ const Index = ({ rooms, title }) => {
                     align={"center"}
                     gap={"32px"}
                 >
-                    {rooms?.map((item)=> {
+                    {newitem?.map((item)=> {
                         return (
-                            <AtomLink to={item.link} key={item.name}>
+                            <AtomLink to={`products/${item.link}`} key={item.name}>
                                 <MoleculeFlexWrap
                                     width={"100%"}
                                     justify={"space-between"}
@@ -40,17 +36,12 @@ const Index = ({ rooms, title }) => {
                                     gap={"16px"}
                                 >
                                     <AtomImg
-                                        src={item.room}
+                                        src={item.item}
                                         alt={"룸 이미지"}
                                     />
                                     <MoleculeRoundLink
                                         RoundGap={"0"}
                                         RoundPadding={""}
-                                        rightItem={<AtomIcon
-                                            icon={"iconamoon:arrow-right-2-duotone"}
-                                            height={"24px"}
-                                            style={{ color : "var(--black01)"}}
-                                        />}
                                         backgroundcolor={"transparents"}
                                         RoundIsTitle={false}
                                         RoundTextFont={false}
@@ -58,6 +49,13 @@ const Index = ({ rooms, title }) => {
                                         RoundTextColor={"var(--brown)"}
                                         RoundTextSize={22}
                                         RoundTextLetterSpacing={"0%"}
+                                    />
+                                    <AtomText
+                                        text={`$${new Intl.NumberFormat("un-US").format(item.price)}`}
+                                        textcolor={"var(--orange)"}
+                                        textsize={"16px"}
+                                        textweight={400}
+                                        lineheight={"24px"}
                                     />
                                 </MoleculeFlexWrap>
                             </AtomLink>

@@ -6,3 +6,4 @@ export { default as AtomLink } from "./AtomLink";
 export { default as AtomRoundBg } from "./AtomRoundBg";
 export { default as AtomImg } from "./AtomImg";
 export { default as AtomBgColor } from "./AtomBgColor";
+export { default as AtomInput } from "./AtomInput";

@@ -17,7 +17,7 @@ const Index = ({ newitem, title }) => {
                         textsize={40}
                         textcolor={"var(--brown)"}
                         letterSpacing={"-0.96px"}
-                        />
+                    />
                 </AtomFlexWrap>
                 <MoleculeFlexWrap
                     width={"100%"}
@@ -33,30 +33,47 @@ const Index = ({ newitem, title }) => {
                                     justify={"space-between"}
                                     align={"start"}
                                     direction={"column"}
-                                    gap={"16px"}
+                                    gap={"32px"}
                                 >
-                                    <AtomImg
-                                        src={item.item}
-                                        alt={"룸 이미지"}
-                                    />
-                                    <MoleculeRoundLink
-                                        RoundGap={"0"}
-                                        RoundPadding={""}
-                                        backgroundcolor={"transparents"}
-                                        RoundIsTitle={false}
-                                        RoundTextFont={false}
-                                        RoundText={item.name}
-                                        RoundTextColor={"var(--brown)"}
-                                        RoundTextSize={22}
-                                        RoundTextLetterSpacing={"0%"}
-                                    />
-                                    <AtomText
-                                        text={`$${new Intl.NumberFormat("un-US").format(item.price)}`}
-                                        textcolor={"var(--orange)"}
-                                        textsize={"16px"}
-                                        textweight={400}
-                                        lineheight={"24px"}
-                                    />
+                                    <MoleculeFlexWrap
+                                        width={"100%"}
+                                        justify={"space-between"}
+                                        align={"start"}
+                                        direction={"column"}
+                                        gap={"19px"}
+                                    >
+                                        <AtomImg
+                                            src={item.item}
+                                            alt={"상품정보"}
+                                        />
+                                        <MoleculeFlexWrap
+                                            width={"100%"}
+                                            justify={"space-between"}
+                                            align={"start"}
+                                            direction={"column"}
+                                            gap={"4px"}
+                                        >
+                                            <MoleculeRoundLink
+                                                RoundGap={"0"}
+                                                RoundPadding={""}
+                                                backgroundcolor={"transparent"}
+                                                RoundIsTitle={false}
+                                                RoundTextFont={false}
+                                                RoundText={item.name}
+                                                RoundTextColor={"var(--brown)"}
+                                                RoundTextSize={22}
+                                                RoundTextLetterSpacing={""}
+                                            />
+                                            <AtomText
+                                                text={`$${new Intl.NumberFormat("un-US").format(item.price)}`}
+                                                textcolor={"var(--orange)"}
+                                                textsize={"16px"}
+                                                textweight={400}
+                                                lineheight={"24px"}
+                                            />
+                                        </MoleculeFlexWrap>
+
+                                    </MoleculeFlexWrap>
                                 </MoleculeFlexWrap>
                             </AtomLink>
                         )

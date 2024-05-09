@@ -83,7 +83,7 @@ const Index = () => {
                 btn : {
                     width: "202px",
                     border : "1px solid var(--orange)",
-                    backgroundcolor: "transparents",
+                    backgroundcolor: "transparent",
                     RoundGap : "10px",
                     RoundPadding : "16px 18px",
                     icon : "iconamoon:arrow-right-2-duotone",
@@ -123,7 +123,7 @@ const Index = () => {
                 btn : {
                     width: "202px",
                     border : "1px solid var(--orange)",
-                    backgroundcolor: "transparents",
+                    backgroundcolor: "transparent",
                     RoundGap : "10px",
                     RoundPadding : "16px 18px",
                     icon : "iconamoon:arrow-right-2-duotone",
@@ -162,7 +162,7 @@ const Index = () => {
                 btn : {
                     width: "202px",
                     border : "1px solid var(--orange)",
-                    backgroundcolor: "transparents",
+                    backgroundcolor: "transparent",
                     RoundGap : "10px",
                     RoundPadding : "16px 18px",
                     icon : "iconamoon:arrow-right-2-duotone",

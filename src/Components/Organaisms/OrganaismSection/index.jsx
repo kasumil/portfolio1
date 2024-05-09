@@ -17,7 +17,7 @@ const Index = ({ sectionData }) => {
                     reverse={sectionData?.reverse}
                 >
                     <LeftWrap>
-                        <LeftWrap gap={sectionData?.content?.gap}>
+                        <LeftWrap $gap={sectionData?.content?.gap}>
                             <AtomTitle
                                 letterspacing={"-0.96px"}
                                 title={sectionData?.content?.title}
@@ -66,7 +66,7 @@ const Index = ({ sectionData }) => {
 const LeftWrap = styled.div`
     display: flex;
     flex-direction: column;
-    gap: ${props => props.gap? props.gap : "32px"};
+    gap: ${props => props.$gap? props.$gap : "32px"};
     width: 485px;
     white-space: line-wrap;
 `;

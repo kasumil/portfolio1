@@ -1,4 +1,3 @@
-import React from 'react';
 import { AtomRoundBg, AtomTitle, AtomText } from '@Components/Atoms';
 
 const Index = ({ 
